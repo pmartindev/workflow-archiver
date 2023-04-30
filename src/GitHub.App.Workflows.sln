@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHub.App.Workflows.WebApi", "GitHub.App.Workflows.WebApi\GitHub.App.Workflows.WebApi.csproj", "{BD91E28B-58CA-448C-870E-83C0A94F3DC2}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose\docker-compose.dcproj", "{D077E0A2-2463-4993-88F6-A84FD50B9BEB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "splunk", "splunk", "{1886E9D6-399A-45E9-A88E-674867D46596}"
+	ProjectSection(SolutionItems) = preProject
+		splunk\default.yml = splunk\default.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD91E28B-58CA-448C-870E-83C0A94F3DC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD91E28B-58CA-448C-870E-83C0A94F3DC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD91E28B-58CA-448C-870E-83C0A94F3DC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD91E28B-58CA-448C-870E-83C0A94F3DC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D077E0A2-2463-4993-88F6-A84FD50B9BEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D077E0A2-2463-4993-88F6-A84FD50B9BEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D077E0A2-2463-4993-88F6-A84FD50B9BEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D077E0A2-2463-4993-88F6-A84FD50B9BEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C760B3A5-8052-40B3-A1EB-EE61A9078BF9}
+	EndGlobalSection
+EndGlobal

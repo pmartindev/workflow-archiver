@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  github.app.workflows.webapi:
+    image: githubappworkflowswebapi
+    build:
+      context: ../
+      dockerfile: GitHub.App.Workflows.WebApi/Dockerfile
+    depends_on:
+      - minio
+      - splunk
+
+  minio:
+    image: minio/minio:latest
+    hostname: minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+
+  splunk:
+    image: splunk/splunk:9.0
+    hostname: splunk
+    ports:
+      - "8000:8000"
+      - "8088:8088"

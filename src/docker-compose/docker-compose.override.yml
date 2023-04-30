@@ -1,0 +1,33 @@
+version: '3.4'
+
+services:
+  github.app.workflows.webapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+    expose:
+      - "80"
+    ports:
+      - "3000:80"
+    volumes:
+      - ${HOME}/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+      - ${HOME}/.aspnet/https:/root/.aspnet/https:ro
+      - ../keys:/keys:ro
+
+  minio:
+    volumes:
+      - ../minio_storage:/data
+    environment:
+      MINIO_ACCESS_KEY: github-app
+      MINIO_ROOT_USER: minio
+      MINIO_ROOT_PASSWORD: gqF*8DoC6BVvJN6U
+      MINIO_SECRET_KEY: qD#Z7%cH32sdOXko
+    command: server --console-address ":9001" /data
+
+  splunk:
+    environment:
+      SPLUNK_START_ARGS: --accept-license
+      SPLUNK_PASSWORD: ^Jx9J8&y!%t
+      SPLUNK_LICENSE_URI: Free
+    volumes:
+      - ../splunk/default.yml:/tmp/defaults/default.yml

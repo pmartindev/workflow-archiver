@@ -1,0 +1,9 @@
+---
+splunk:
+  hec:
+    cert: null
+    enable: true
+    password: null
+    port: 8088
+    ssl: false
+    token: fb850780-81ea-4283-8319-c395e509bca7
