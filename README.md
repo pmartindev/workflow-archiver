@@ -42,3 +42,7 @@ sequenceDiagram
 ```
 
 ## How to Use it
+
+* [Developing](/docs/developing.md)
+* [Deploying](docs/deploying.md)
+* [Installation](docs/installation.md)
